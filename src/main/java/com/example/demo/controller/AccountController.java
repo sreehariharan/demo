@@ -3,7 +3,6 @@ package com.example.demo.controller;
 
 import com.example.demo.entities.AccountEntity;
 import com.example.demo.model.AccountRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.services.AccountService;
 
@@ -33,6 +32,8 @@ public class AccountController {
 
     @PostMapping
     public Integer createAccount(@RequestBody AccountRequest accountRequest){
+
+        System.out.println("Hello");
 
         return accountService.createAccount(accountRequest);
 
